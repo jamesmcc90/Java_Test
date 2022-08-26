@@ -15,7 +15,18 @@ public class Main {
         System.out.println(myClass.sonName);
         System.out.println(myClass.sonAge);
 
+        //Call "sum" method
         System.out.println(sum());
+
+        int myNumber = 10;
+        int myNumber2 = 5;
+
+        if (myNumber2 >= myNumber) {
+            System.out.println("20 is greater than 10!");
+        } else if (myNumber > myNumber2) {
+            System.out.println("10 is greater than 5!");
+        }
+
 
     }
 
