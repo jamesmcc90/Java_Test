@@ -1,19 +1,22 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        String name = "James McConnell";
+       String name = "James McConnell";
         int age = 32;
 
         System.out.println("Hello world!");
-        System.out.println("My name is " + name + " and I am "  + age + "-years-old.");
+        System.out.println("My name is " + name + " and I am " + age + "-years-old.");
 
         //Get myClass instance from class 'MyClass'
         MyClass myClass = new MyClass();
 
-        System.out.println(myClass.sonName);
-        System.out.println(myClass.sonAge);
+        System.out.println("My son's name is " + myClass.sonName + " and he is " + myClass.sonAge + "-year-old.");
 
         //Call "sum" method
         System.out.println(sum());
@@ -27,6 +30,26 @@ public class Main {
             System.out.println("10 is greater than 5!");
         }
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter name");
+
+        String input = scanner.nextLine();
+
+        if (input.isBlank()){
+            System.out.println("please enter something!");
+        }else if (!input.isBlank()){
+          System.out.println("Hello " + input);
+        }
+
+        List<String> F1 = Arrays.asList("Alpine", "Mercedes", "Ferrari");
+        System.out.println(F1);
+
+        String[] cars = {"BMW", "Volkswagen"};
+        System.out.println("Here are some cars:");
+        for (String i : cars){
+             System.out.println(i);
+        }
+
 
     }
 
@@ -36,6 +59,8 @@ public class Main {
 
         return num1 + num2;
     }
+
+          
 }
 
 class MyClass {
